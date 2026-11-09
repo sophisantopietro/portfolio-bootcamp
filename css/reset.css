@@ -1,0 +1,78 @@
+/* RESET CSS */
+
+/* 1. Eliminar márgenes y paddings por defecto */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Configuración base del documento */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Elementos multimedia */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* 4. Formularios */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 5. Botones */
+button {
+  cursor: pointer;
+}
+
+/* 6. Enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 7. Listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 8. Encabezados y textos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* 9. Tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
