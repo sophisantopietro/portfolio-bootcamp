@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Pagina para contactar a Sophia Santopietro con formulario</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a class="logo" href="index.html">SS</a>
+      </div>
+    </header>
+    <main>
+      <form action="url" method="post">
+        <fieldset>
+          <legend>Contacta conmigo -></legend>
+          <div>
+            <label for="nombre">Nombre completo:</label>
+            <input
+              id="nombre"
+              type="text"
+              name="nombre"
+              placeholder="Reyes Limones"
+              required
+            />
+          </div>
+          <div>
+            <label for="asunto">Asunto:</label>
+            <input id="asunto" type="text" name="asunto" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="ejemplo@x.com"
+              required
+            />
+          </div>
+          <div>
+            <p>Quieres a Sophi?</p>
+            <input
+              id="radiobt1"
+              type="radio"
+              name="radio-amor"
+              value="1"
+              required
+            />
+            <label for="radiobt1">Si</label>
+            <input
+              id="radiobt2"
+              type="radio"
+              name="radio-amor"
+              value="2"
+              required
+            />
+            <label for="radiobt2">No</label>
+          </div>
+          <div>
+            <label for="edad">Rango de edad:</label>
+            <select name="edad" id="edad" required>
+              <option value="menor">-18</option>
+              <option value="medio">Entre 18 y 40</option>
+              <option value="anciano">+40</option>
+            </select>
+          </div>
+          <div>
+            <label for="comentario">Dejame un mensaje:</label>
+
+            <textarea
+              name="comentario"
+              id="comentario"
+              placeholder="Escribe aqui..."
+              cols="30"
+              rows="3"
+            ></textarea>
+          </div>
+        </fieldset>
+        <input class="form-buttons" type="submit" value="Enviar" />
+        <input class="form-buttons" type="reset" value="Reset" />
+      </form>
+    </main>
+    <footer class="footer-container footer-contacto">
+      <div class="footer-content">
+        <div class="buttons-footer">
+          <a href="https://github.com/sophisantopietro">Github</a>
+          <a href="https://www.linkedin.com/in/sophia-santopietro-72621a167/"
+            >LinkedIn</a
+          >
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <p>Hecho con ❤ por Sophi</p>
+        <div class="copy-right">
+          &copy; 2026 Sophia Santopietro - Bootcamp The Bridge
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
