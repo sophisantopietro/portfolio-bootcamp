@@ -29,12 +29,12 @@
       </button>
     </div>
   </header>
-  <main>
+  <main class="main-contact">
     <section class="contact">
       <div class="page-intro">
-        <p class="section-label">Contacto</p>
-        <h1>Hablemos</h1>
-        <p>¿Tenés un proyecto en mente, una propuesta o simplemente querés saludar? ¡Escribime!</p>
+        <p class="section-label section-label-contact">Contacto</p>
+        <h1 class="section-title">Hablemos</h1>
+        <p class="section-description">¿Tenés un proyecto en mente, una propuesta o simplemente querés saludar? ¡Escribime!</p>
         <div class="contact-buttons">
           <a class="btn btn-outline" href="https://github.com/sophisantopietro">
             <i class="bi bi-github" aria-hidden="true"></i> GitHub
@@ -55,30 +55,13 @@
           </div>
 
           <div class="form-field">
-            <label for="asunto">Asunto:</label>
-            <input id="asunto" type="text" name="asunto" required />
-          </div>
-
-          <div class="form-field">
             <label for="email">Email:</label>
             <input id="email" type="email" name="email" placeholder="ejemplo@x.com" required />
           </div>
 
-          <div class="radio-group">
-            <p>Quieres a Sophi?</p>
-            <input id="radiobt1" type="radio" name="radio-amor" value="1" required />
-            <label for="radiobt1">Si</label>
-            <input id="radiobt2" type="radio" name="radio-amor" value="2" required />
-            <label for="radiobt2">No</label>
-          </div>
-
           <div class="form-field">
-            <label for="edad">Rango de edad:</label>
-            <select name="edad" id="edad" required>
-              <option value="menor">-18</option>
-              <option value="medio">Entre 18 y 40</option>
-              <option value="anciano">+40</option>
-            </select>
+            <label for="asunto">Asunto:</label>
+            <input id="asunto" type="text" name="asunto" required />
           </div>
 
           <div class="form-field">
@@ -89,7 +72,7 @@
 
         <div class="form-actions">
           <button class="btn btn-primary" type="submit">Enviar</button>
-          <button class="btn btn-outline" type="reset">Reset</button>
+          <button class="btn btn-outline" type="reset">Limpiar campos</button>
         </div>
       </form>
     </section>

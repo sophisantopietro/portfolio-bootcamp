@@ -42,6 +42,9 @@
   /* 24px */
   --font-size-5: 2rem;
   /* 32px */
+  --font-size-6: 2.5rem;
+  /* 40px */
+
 }
 
 /* ESTILOS GENERALES */
@@ -72,7 +75,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-xs);
   height: 100%;
 }
 
@@ -91,6 +94,7 @@ header {
   height: 3px;
   background-color: var(--color-secondary);
 }
+
 
 /* FONTS */
 h1,
@@ -218,6 +222,14 @@ h1 {
   font-weight: var(--font-weight-medium);
 }
 
+.section-label-contact {
+  font-size: var(--font-size-4);
+}
+
+.section-description {
+  font-weight: var(--font-weight-bold);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -266,7 +278,7 @@ h1 {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 8px 10px;
   border-radius: 999px;
   font-weight: var(--font-weight-medium);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -379,6 +391,15 @@ h1 {
   padding: 10px 15px;
 }
 
+@media (max-width: 576px) {
+  .logo-main-page {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-radius: 0;
+    padding: 4px 4px;
+  }
+}
+
 /* IMÁGENES */
 
 .foto-personal {
@@ -395,7 +416,7 @@ h1 {
   max-width: 560px;
   background-color: var(--color-soft);
   border-radius: 24px;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
 }
 
 .contact-form fieldset {
@@ -420,14 +441,15 @@ h1 {
   flex-direction: column;
   gap: var(--spacing-xs);
 }
+.form-field ::placeholder {
+  color: #bfb3b3;
+}
 
-.form-field label,
-.radio-group p {
+.form-field label {
   font-weight: var(--font-weight-medium);
 }
 
 .form-field input,
-.form-field select,
 .form-field textarea {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -442,24 +464,14 @@ h1 {
 }
 
 .form-field input:focus,
-.form-field select:focus,
 .form-field textarea:focus {
   outline: 2px solid var(--color-secondary);
 }
 
-.radio-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--spacing-xs) var(--spacing-sm);
-}
-
-.radio-group p {
-  flex-basis: 100%;
-}
-
-.radio-group input {
-  accent-color: var(--color-primary);
+.section-title {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  margin: var(--spacing-sm) 0;
 }
 
 .form-actions {
@@ -599,6 +611,10 @@ h1 {
 @media (min-width: 992px) {
   main {
     padding: var(--spacing-lg);
+  }
+
+  .main-contact {
+    padding: var(--spacing-md);
   }
 
   .nav-list {
