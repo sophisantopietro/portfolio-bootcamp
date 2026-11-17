@@ -441,6 +441,7 @@ h1 {
   flex-direction: column;
   gap: var(--spacing-xs);
 }
+
 .form-field ::placeholder {
   color: #bfb3b3;
 }
@@ -579,6 +580,13 @@ h1 {
   .nav-list a:hover {
     background-color: transparent;
     color: var(--color-secondary);
+  }
+
+  .nav-list a[aria-current="page"] {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    border-radius: 0;
+    background-color: transparent;
   }
 
   .nav-list .nav-cta {
