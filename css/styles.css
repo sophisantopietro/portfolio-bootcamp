@@ -13,6 +13,7 @@
   --color-soft: #f2d5c8;
   --color-text: #3a2a2a;
   --color-white: #ffffff;
+  --color-placeholder: #8a7a7a;
 
   /* ESPACIOS */
 
@@ -45,6 +46,20 @@
   --font-size-6: 2.5rem;
   /* 40px */
 
+}
+
+/* DARK MODE COLORS */
+
+body.dark-mode {
+  --color-primary: #A85D6D;
+  --color-secondary: #D0A08F;
+  --color-bg-dark: #171114;
+  --color-bg-light: #21191D;
+  --color-card: #302329;
+  --color-soft: #49313B;
+  --color-text: #F0E5E0;
+  --color-white: #FFF9F6;
+  --color-placeholder: #BBA9A8;
 }
 
 /* ESTILOS GENERALES */
@@ -118,7 +133,7 @@ h3 {
 .nav-list a {
   padding: 0.3rem;
   text-align: center;
-  color: #555;
+  color: var(--color-text);
   font-size: var(--font-size-2);
   transition: background-color 0.5s ease, color 0.5s ease,
     border-color 0.5s ease;
@@ -154,6 +169,13 @@ h1 {
   font-size: var(--font-size-5);
   margin: var(--spacing-sm) 0;
   color: var(--color-primary);
+}
+
+.dark-mode-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
 }
 
 .hero,
@@ -254,7 +276,7 @@ h1 {
 }
 
 .article-place {
-  color: #8a7a7a;
+  color: var(--color-placeholder);
   font-size: var(--font-size-2);
   margin-bottom: var(--spacing-xs);
 }
@@ -670,4 +692,53 @@ h1 {
   .contact-form {
     flex: 1;
   }
+}
+
+
+/* DARKMODE  */
+
+body.dark-mode {
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+}
+
+body.dark-mode header {
+  background-color: var(--color-bg-light);
+  border-color: var(--color-soft);
+}
+
+/* NAVEGACIÓN */
+
+body.dark-mode .nav-list a[aria-current='page'] {
+  color: var(--color-primary);
+  background-color: var(--color-soft);
+}
+
+/* BOTONES */
+
+body.dark-mode .btn-primary {
+  color: var(--color-white);
+}
+
+body.dark-mode #dark-mode-btn {
+  color: var(--color-primary);
+}
+
+/* LOGO */
+
+body.dark-mode .logo {
+  color: var(--color-white);
+}
+
+/* SKILLS */
+
+body.dark-mode .skill:hover i {
+  color: var(--color-white);
+}
+
+/* TEXTOS AUXILIARES */
+
+body.dark-mode .card-placeholder,
+body.dark-mode .form-field ::placeholder {
+  color: var(--color-placeholder);
 }
