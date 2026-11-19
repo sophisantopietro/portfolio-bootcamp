@@ -1,9 +1,7 @@
 export const header = `
     <div class="header-container">
       <a class="logo logo-main-page" href="index.html">SS</a>
-      <button id="dark-mode-btn" class="dark-mode-btn" aria-label="Botón de modo oscuro" aria-pressed="false">
-        <i id="dark-mode-icon" class="bi bi-moon-stars"></i>
-      </button>
+    
       <nav class="nav-list">
         <a href="about.html">About</a>
         <a href="index.html#skills">Skills</a>
@@ -11,11 +9,16 @@ export const header = `
         <a href="index.html#recursos">Recursos</a>
         <a class="nav-cta" href="contact.html">Contacto</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-buttons">
+        <button id="dark-mode-btn" class="dark-mode-btn" aria-label="Botón de modo oscuro" aria-pressed="false">
+          <i id="dark-mode-icon" class="bi bi-moon-stars"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
 `;
 
