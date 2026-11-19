@@ -171,7 +171,7 @@ h1 {
   color: var(--color-primary);
 }
 
-.dark-mode-btn{
+.dark-mode-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -216,11 +216,122 @@ h1 {
 
 /* EXPERIENCIA */
 
-.page-section,
+.page-section {
+  width: 100%;
+  max-width: 1240px;
+  margin-top: var(--spacing-lg);
+}
+
+/* SKILLS */
+
 .skills {
   width: 100%;
   max-width: 1240px;
   margin-top: var(--spacing-lg);
+}
+
+/* GRID DE SKILLS */
+
+#skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+/* TARJETAS */
+
+.skill-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+
+  padding: var(--spacing-md);
+  background-color: var(--color-card);
+  border: 1px solid var(--color-soft);
+  border-radius: 20px;
+
+  box-shadow: 0 4px 12px rgba(107, 31, 38, 0.08);
+
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* LOGO */
+
+.skill-card>i {
+  display: grid;
+  place-items: center;
+
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--spacing-xs);
+
+  border-radius: 50%;
+  background-color: var(--color-soft);
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+/* NOMBRE */
+
+.skill-card h3 {
+  font-size: var(--font-size-3);
+  color: var(--color-primary);
+}
+
+/* NIVEL */
+
+.skill-card>span {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  background-color: var(--color-soft);
+  color: var(--color-primary);
+  font-size: var(--font-size-2);
+}
+
+/* DESCRIPCIÓN */
+
+.skill-card p {
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* CHIPS */
+
+.skill-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--spacing-xs);
+}
+
+.skill-chip {
+  padding: 4px 10px;
+  border: 1px solid var(--color-soft);
+  border-radius: 999px;
+
+  color: var(--color-placeholder);
+  font-size: var(--font-size-2);
+}
+
+/* HOVER */
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-secondary);
+  box-shadow: 0 10px 25px rgba(107, 31, 38, 0.13);
+}
+
+.skill-card:hover>i {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .contact {
@@ -349,55 +460,25 @@ h1 {
   font-style: italic;
 }
 
-.card-content-size {
-  flex: 1 1 100%;
-}
-
 .card-text {
   margin: var(--spacing-xs);
 }
 
 /* SKILLS  */
 .secondary-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px
-}
-
-.skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-md);
+
+  width: 100%;
+  max-width: 1240px;
+  margin-top: var(--spacing-lg);
 }
 
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xs);
-  width: 90px;
-  text-align: center;
-  font-size: var(--font-size-2);
-}
-
-.skill i {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--color-card);
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(107, 31, 38, 0.08);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.skill:hover i {
-  background-color: var(--color-primary);
-  color: var(--color-bg-light);
+.secondary-cards-container .card-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 /* LOGO */
@@ -430,6 +511,19 @@ h1 {
   height: 460px;
   object-fit: cover;
   border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
+  box-shadow:
+    0 15px 35px rgba(107, 31, 38, 0.20),
+    0 5px 15px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(208, 160, 143, 0.20);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efecto hover */
+.foto-personal:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 22px 45px rgba(107, 31, 38, 0.28),
+    0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
 /* FORM */
@@ -626,13 +720,13 @@ h1 {
     display: none;
   }
 
-  .card-content-size {
-    flex: 1 1 500px;
-  }
-
   .contact-buttons {
     justify-content: flex-end;
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-3);
+  }
+
+  #skills-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -655,10 +749,6 @@ h1 {
     padding: 0.75rem 1rem;
   }
 
-  .card-content-size {
-    flex: 0 1 400px;
-  }
-
   .hero,
   .about-me {
     flex-direction: row;
@@ -667,16 +757,6 @@ h1 {
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill {
-    font-size: 0.95rem;
-  }
-
-  .skill i {
-    width: 72px;
-    height: 72px;
-    font-size: 2rem;
   }
 
   .contact {
@@ -691,6 +771,14 @@ h1 {
 
   .contact-form {
     flex: 1;
+  }
+
+  #skills-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .secondary-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -730,15 +818,25 @@ body.dark-mode .logo {
   color: var(--color-white);
 }
 
-/* SKILLS */
-
-body.dark-mode .skill:hover i {
-  color: var(--color-white);
-}
-
 /* TEXTOS AUXILIARES */
 
 body.dark-mode .card-placeholder,
 body.dark-mode .form-field ::placeholder {
   color: var(--color-placeholder);
+}
+
+/* FOTO PERSONAL */
+
+body.dark-mode .foto-personal {
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(168, 93, 109, 0.12);
+}
+
+body.dark-mode .skill-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .skill-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
